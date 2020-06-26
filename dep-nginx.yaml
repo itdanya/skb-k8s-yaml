@@ -1,0 +1,25 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dep-nginx
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: dep-nginx
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: dep-nginx
+    spec:
+      containers:
+      - image: nginx:1.19
+        name: nginx
+        ports:
+        - containerPort: 80
