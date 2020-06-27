@@ -7,7 +7,7 @@ data:
   default.conf: |
     server {
         listen       80 default_server;
-        server_name  skb-lab.ru;
+        server_name  _;
 
         default_type text/plain;
 
