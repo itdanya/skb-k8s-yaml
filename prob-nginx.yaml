@@ -2,12 +2,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: prob-nginx
+  name: 123-test
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: prob-nginx
+      app: 123-test
   strategy:
     rollingUpdate:
       maxSurge: 1
@@ -16,7 +16,7 @@ spec:
   template:
     metadata:
       labels:
-        app: prob-nginx
+        app: 123-test
     spec:
       containers:
       - image: nginx:1.19
