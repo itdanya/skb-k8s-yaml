@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: pod-nginx
+  name: 123-test
 spec:
   containers:
   - image: nginx:1.19
